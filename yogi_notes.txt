@@ -1,0 +1,23 @@
+custom input files -- must have the folder name 'input' with all the images 
+
+eg. 
+
+plants
+|-----input
+        |---- image1.png 
+        |---- image2.png 
+
+
+-- Reinstall colmap and try processing the input 
+
+
+
+
+For Training Cutom dataset : 
+
+python preprocess_video.py --datadir 'data/custom/tennis'  
+python convert.py -s 'data/custom/tennis' 
+python train.py -s 'data/custom/tennis' -m 'output/tennis_1' --eval 
+python render.py -m 'output/tennis' 
+
+

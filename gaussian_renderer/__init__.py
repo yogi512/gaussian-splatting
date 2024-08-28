@@ -33,9 +33,19 @@ def render(viewpoint_camera, pc : GaussianModel, pipe, bg_color : torch.Tensor, 
     tanfovx = math.tan(viewpoint_camera.FoVx * 0.5)
     tanfovy = math.tan(viewpoint_camera.FoVy * 0.5)
 
+    # yogi added ####################
+    # tanfovx = math.tan(viewpoint_camera.FovX * 0.5)
+    # tanfovy = math.tan(viewpoint_camera.FovY * 0.5)
+    # #################################
+
     raster_settings = GaussianRasterizationSettings(
         image_height=int(viewpoint_camera.image_height),
         image_width=int(viewpoint_camera.image_width),
+       
+       ######## yogi added ####################
+        # image_height = int(viewpoint_camera.height),
+        # image_width = int(viewpoint_camera.width),
+        ################################
         tanfovx=tanfovx,
         tanfovy=tanfovy,
         bg=bg_color,
