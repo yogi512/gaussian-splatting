@@ -153,7 +153,3 @@ python compute_metrics.py -m 'output/work_1'
 - Ensure the dataset is correctly formatted with images inside the `input` folder.
 - Replace `<dataset_name>` and `<model_name>` with the appropriate dataset and model names during execution.
 
-Happy Training, Rendering, and Evaluating!
-```
-
-This guide now includes each step in the correct order, with corresponding commands for preprocessing, folder structure, conversion, training, rendering, and computing metrics.
