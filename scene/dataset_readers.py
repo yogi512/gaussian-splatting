@@ -153,8 +153,8 @@ def readColmapSceneInfo(path, images, eval, llffhold=8):
         # test_cam_infos = cam_infos[len(cam_infos)-10:]    
 
         # for work dataset 
-        train_cam_infos = cam_infos[:160]
-        test_cam_infos = cam_infos[160:]
+        train_cam_infos = cam_infos[:106]
+        test_cam_infos = cam_infos[106:]
         ###########
     else:
         train_cam_infos = cam_infos

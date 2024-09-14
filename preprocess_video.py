@@ -33,7 +33,7 @@ if __name__ == '__main__':
     sc_name = str(args.datadir).split('/')[-1]
 
     # Create a single directory to store all images
-    output_dir = os.path.join(args.datadir, 'images')
+    output_dir = os.path.join(args.datadir, 'input')
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -44,7 +44,7 @@ if __name__ == '__main__':
         exo_video_path = os.path.join(args.datadir, sc_name+'_exo.mp4')
     exo_video_frames = cv2.VideoCapture(exo_video_path)
     fps = exo_video_frames.get(cv2.CAP_PROP_FPS)
-    interval = int(fps / 15)  # Calculate the interval to get 5 frames per second
+    interval = int(fps / 5)  # Calculate the interval to get 5 frames per second
 
     start_count = 1
     next_count = extract_frames(exo_video_path, start_count, interval, output_dir)

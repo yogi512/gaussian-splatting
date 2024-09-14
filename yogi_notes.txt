@@ -8,10 +8,6 @@ plants
         |---- image2.png 
 
 
--- Reinstall colmap and try processing the input 
-
-
-
 
 For Training Cutom dataset : 
 
