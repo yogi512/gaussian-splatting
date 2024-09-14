@@ -502,24 +502,8 @@ class Scene:
     ################################################################################
 
 
-my_views = [
-    CameraInfo(uid=1, R=np.array([[ 0.01197063,  0.35942869, -0.93309577],
-       [-0.36837951,  0.86911389,  0.33005693],
-       [ 0.92959843,  0.33978237,  0.14281001]]), 
-       T=np.array([ 0.22266113, -0.5297604 ,  3.94045344]), 
-       FovY=np.array(0.6196963117792306), FovX=np.array(1.031333969603764), 
-       image=None, image_path=None, image_name='test_custom', 
-       width=1263, height=710)   
-]
 
-my_views_transform = SceneInfo(point_cloud=None, train_cameras=[], test_cameras=my_views, nerf_normalization={}, ply_path="")
-
-
-
-my_views_transform_1 = Camera(colmap_id= my_views_transform.test_cameras[0].uid, R= my_views_transform.test_cameras[0].R, T= my_views_transform.test_cameras[0].T,FoVx= my_views_transform.test_cameras[0].FovX, FoVy= my_views_transform.test_cameras[0].FovY, image= my_views_transform.test_cameras[0].image, gt_alpha_mask= None, image_name= my_views_transform.test_cameras[0].image_name, uid=0, data_device="cuda")
-
-
-my_views1 = [Camera(colmap_id=1,R=np.array([[ 0.01197063,  0.35942869, -0.93309577],
+my_views= [Camera(colmap_id=1,R=np.array([[ 0.01197063,  0.35942869, -0.93309577],
        [-0.36837951,  0.86911389,  0.33005693],
        [ 0.92959843,  0.33978237,  0.14281001]]), 
        T=np.array([ 0.22266113, -0.5297604 ,  3.94045344]),
@@ -612,7 +596,7 @@ def render_sets(dataset : ModelParams, iteration : int, pipeline : PipelineParam
 
     
         # render_set(dataset.model_path, "yogi_test", scene.loaded_iter, scene.getTestCameras(), gaussians, pipeline, background)
-        render_set(dataset.model_path, "yogi_renders", scene.loaded_iter, my_views1, gaussians, pipeline, background)
+        render_set(dataset.model_path, "yogi_renders", scene.loaded_iter, my_views, gaussians, pipeline, background)
 
 
 if __name__ == "__main__":
