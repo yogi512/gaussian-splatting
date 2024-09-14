@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 custom input files -- must have the folder name 'input' with all the images 
 
 eg. 
@@ -13,7 +20,10 @@ For Training Cutom dataset :
 
 python preprocess_video.py --datadir 'data/custom/tennis'  
 python convert.py -s 'data/custom/tennis' 
-python train.py -s 'data/custom/tennis' -m 'output/tennis_1' --eval 
-python render.py -m 'output/tennis' 
+python yogi_train.py -s 'data/custom/tennis' -m 'output/tennis_1' --eval 
+python render.py -m 'output/tennis'  to render all the images in ego centric view 
+python yogi_render.py -m 'output/tennis' and give camera parameters in  a list to get the necessary viewpoints 
+
+
 
 
