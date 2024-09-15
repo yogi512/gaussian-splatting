@@ -8,7 +8,7 @@ def get_image_files(datadir):
     image_files.sort()  # Sort to maintain the order
     return image_files
 
-def create_video_from_images(datadir, output_file='output.mp4', fps=30):
+def create_video_from_images(datadir, output_file='cs1.mp4', fps=30):
     image_files = get_image_files(datadir)
     
     if not image_files:

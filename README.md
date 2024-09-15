@@ -27,7 +27,7 @@ The components have different requirements w.r.t. both hardware and software. Th
 
 ## Steps
 
-### 1. Preprocess the Data
+### 1. Preprocess the Data using our custom function
 
 Run the following command to preprocess the images from the `input` folder:
 
@@ -101,7 +101,7 @@ python yogi_train.py -s 'data/custom/<dataset_name>' -m 'output/<model_name>' --
 Example:
 
 ```bash
-python yogi_train.py -s 'data/custom/work' -m 'output/work_1' --eval
+python yogi_train.py -s 'data/custom/work' -m 'output/work' --eval
 ```
 
 ### 5. Render Ego-Centric Views
@@ -115,10 +115,10 @@ python render.py -m 'output/<model_name>'
 Example:
 
 ```bash
-python render.py -m 'output/work_1'
+python render.py -m 'output/work'
 ```
 
-### 6. Yogi Render with Camera Parameters
+### 6. Render with Camera Parameters with our rendering algorithm
 
 For generating images using specific camera parameters for necessary viewpoints, add the necessary viewpoints in the list  'my_views' and  run:
 
@@ -129,7 +129,7 @@ python yogi_render.py -m 'output/<model_name>'
 Example:
 
 ```bash
-python yogi_render.py -m 'output/work_1'
+python yogi_render.py -m 'output/work'
 ```
 
 ### 7. Compute Metrics
@@ -143,7 +143,7 @@ python metrics.py -m 'output/<model_name>'
 Example:
 
 ```bash
-python compute_metrics.py -m 'output/work_1'
+python metrics.py -m 'output/work'
 ```
 
 ---
